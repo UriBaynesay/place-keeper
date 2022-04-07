@@ -11,19 +11,22 @@
     <main>
         <form onsubmit="setUserSettings(event)">
             <label for="user-email">E-Mail </label>
-            <input type="email" name="user-email-input" id=" user-email-input" placeholder="Insert your email here">
+            <input type="email" name="user-email-input" id=" user-email-input" placeholder="Insert your email here" required>
             <label for="user-age">Age</label>
             <input type="range" id="user-age" min="18" max="80" value="25">
             <h3>Colors</h3>
             <label for="user-background-color">Set Background Color</label>
-            <input type="color" id="user-background-color">
+            <input type="color" id="user-background-color" value="#FFFFFF" onchange="changeBgc(this.value)">
+
             <label for="user-text-color">Set Text Color</label>
-            <input type="color" id="user-text-color">
+            <input type="color" id="user-text-color" value="#494646" onchange="changeTxtColor(this.value)">
+
             <label for="birth-date">Birth Date</label>
-            <input type="date" name="birth-date" id="birth-date">
+            <input type="date" name="birth-date" id="birth-date" required>
+
             <label for="birth-time">Birth Time</label>
             <input type="time" name="birth-time" id="birth-time">
-            <button onclick="setUserSettings(event)">Set</button>
+            <input type="submit" value="Set">
         </form>
     </main>
 
