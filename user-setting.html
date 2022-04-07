@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/user-setting.css" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <main>
+        <form onsubmit="setUserSettings(event)">
+            <label for="user-email">E-Mail </label>
+            <input type="email" name="user-email-input" id=" user-email-input" placeholder="Insert your email here">
+            <label for="user-age">Age</label>
+            <input type="range" id="user-age" min="18" max="80" value="25">
+            <h3>Colors</h3>
+            <label for="user-background-color">Set Background Color</label>
+            <input type="color" id="user-background-color">
+            <label for="user-text-color">Set Text Color</label>
+            <input type="color" id="user-text-color">
+            <label for="birth-date">Birth Date</label>
+            <input type="date" name="birth-date" id="birth-date">
+            <label for="birth-time">Birth Time</label>
+            <input type="time" name="birth-time" id="birth-time">
+            <button onclick="setUserSettings(event)">Set</button>
+        </form>
+    </main>
+
+    <script src="js/user.controller.js"></script>
+  </body>
 </html>
