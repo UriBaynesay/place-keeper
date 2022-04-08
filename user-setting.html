@@ -5,31 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/user-setting.css" />
-    <title>Document</title>
+    <title>User Settings</title>
   </head>
   <body>
     <main>
-        <form onsubmit="setUserSettings(event)">
-            <label for="user-email">E-Mail </label>
-            <input type="email" name="user-email-input" id=" user-email-input" placeholder="Insert your email here" required>
-            <label for="user-age">Age</label>
-            <input type="range" id="user-age" min="18" max="80" value="25">
-            <h3>Colors</h3>
-            <label for="user-background-color">Set Background Color</label>
-            <input type="color" id="user-background-color" value="#FFFFFF" onchange="changeBgc(this.value)">
+      <form onsubmit="onSubmit(event)">
+        <label for="user-email">E-Mail </label>
+        <input
+          type="email"
+          name="user-email-input"
+          id=" user-email-input"
+          placeholder="Insert your email here"
+          required
+        />
+        <label for="user-age">Age</label>
+        <input type="range" id="user-age" min="18" max="80" value="25" />
+        <h3>Colors</h3>
+        <label for="user-background-color">Set Background Color</label>
+        <input
+          type="color"
+          id="user-background-color"
+          value="#FFFFFF"
+          onchange="changeBgc(this.value)"
+        />
 
-            <label for="user-text-color">Set Text Color</label>
-            <input type="color" id="user-text-color" value="#494646" onchange="changeTxtColor(this.value)">
+        <label for="user-text-color">Set Text Color</label>
+        <input
+          type="color"
+          id="user-text-color"
+          value="#494646"
+          onchange="changeTxtColor(this.value)"
+        />
 
-            <label for="birth-date">Birth Date</label>
-            <input type="date" name="birth-date" id="birth-date" required>
+        <label for="birth-date">Birth Date</label>
+        <input type="date" name="birth-date" id="birth-date" required />
 
-            <label for="birth-time">Birth Time</label>
-            <input type="time" name="birth-time" id="birth-time">
-            <input type="submit" value="Set">
-        </form>
+        <label for="birth-time">Birth Time</label>
+        <input type="time" name="birth-time" id="birth-time" />
+        <input type="submit" value="Set" />
+      </form>
     </main>
 
+    <script src="js/services/user.service.js"></script>
     <script src="js/user.controller.js"></script>
   </body>
 </html>
