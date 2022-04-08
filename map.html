@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/map.css">
     <title>Map</title>
 </head>
-<body>
-    
+<body onload="init()">
+    <header class="main-header">Your Map</header>
+    <main class="main-layout">
+        <sec class="map-layout">
+            <div class="map">Map</div>
+        </sec>
+        <sec class="places-layout">
+            <div class="saved-places">Saved places</div>
+        </sec>
+    </main>
+
+    <footer>
+        <small>©Uri Baynesay 2022</small>
+      </footer>
+
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/user.service.js"></script>
+    <script src="js/map.controller.js"></script>
 </body>
 </html>

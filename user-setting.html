@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="styles/user-setting.css" />
     <title>User Settings</title>
   </head>
-  <body>
+  <body onload="init()">
     <main>
       <form onsubmit="onSubmit(event)">
         <label for="user-email">E-Mail </label>
         <input
           type="email"
           name="user-email-input"
-          id=" user-email-input"
+          id="user-email-input"
           placeholder="Insert your email here"
           required
         />

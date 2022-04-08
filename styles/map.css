@@ -1,0 +1,33 @@
+@import url(/styles/var.css);
+*{
+    box-sizing: border-box;
+    color: var(--clr1);
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    height: 500px;
+}
+.map-layout{
+    flex-basis: 50%;
+}
+.places-layout{
+    flex-basis: 50%;
+}
+
+footer{
+    position: fixed;
+    bottom: 0%;
+}

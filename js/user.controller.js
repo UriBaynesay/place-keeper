@@ -1,5 +1,26 @@
 "use strict";
 
+function init(){
+  const elBody=document.body;
+    
+    const userSettings=getUserSettings();
+    if(userSettings){
+        elBody.style.backgroundColor=userSettings.bkcColor;
+        elBody.style.color=userSettings.txtColor;
+    }
+
+    renderFormData(userSettings);
+}
+
+function renderFormData(settings){
+  if(!settings) return;
+  const elForm=document.querySelector('form');
+  elForm.querySelector('[name="user-email-input"]').value=settings.email;
+  elForm.querySelector('[id="user-age"]').value=settings.age;
+  elForm.querySelector('[id="user-background-color"]').value=settings.bkcColor;
+  elForm.querySelector('[id="user-text-color"]').value=settings.txtColor;
+}
+
 function onSubmit(ev) {
   ev.preventDefault();
   console.log(ev);
