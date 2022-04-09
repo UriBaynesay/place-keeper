@@ -8,6 +8,17 @@
     <title>User Settings</title>
   </head>
   <body onload="init()">
+    <datalist id="genderList">
+      <option value="Male"/>
+      <option value="Female"/>
+     
+  </datalist>
+  <header class="header-container">
+    <nav class="nav-bar-container">
+      <a href="index.html">Main Page</a>
+      <a href="map.html">Map</a>
+  </nav>
+  </header>
     <main>
       <form onsubmit="onSubmit(event)">
         <label for="user-email">E-Mail </label>
@@ -19,7 +30,9 @@
           required
         />
         <label for="user-age">Age</label>
-        <input type="range" id="user-age" min="18" max="80" value="25" />
+        <input type="range" id="user-age" min="18" max="80" value="25" onchange="showAge(this)" />
+        <label for="gender">Gender</label>
+        <input type="select" id="gender" list="genderList">
         <h3>Colors</h3>
         <label for="user-background-color">Set Background Color</label>
         <input

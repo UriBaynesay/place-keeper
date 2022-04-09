@@ -1,7 +1,7 @@
 "use strict";
 
 const LOCATION_KEY ="LOCATION_DB";
-const gLocations = [];
+let gLocations = [];
 
 
 function removeLocationById(locationId) {
@@ -17,12 +17,15 @@ function getLocations() {
 }
 
 function addLocation(name, position) {
+
   gLocations.push(_createLocation(position, name));
   _saveLocations();
 }
 
 function createLocations() {
-    if(_loadLocations()) return;
+    if(_loadLocations()!==null&&_loadLocations().length>0){
+      return;
+    }
   gLocations.push(
     _createLocation({ lat: 32.715583676206116, lng: 35.31399762608496 }, "home")
   );

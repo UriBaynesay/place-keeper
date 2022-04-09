@@ -60,7 +60,7 @@ function onCurrentLocation() {
 }
 
 function showCurrentLocation(position){
-    debugger
+
     newLocationFocus({lat:position.coords.latitude,lng:position.coords.longitude})
 }
 

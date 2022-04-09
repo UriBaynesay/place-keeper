@@ -27,10 +27,10 @@ function onSubmit(ev) {
 
   const usrEmail=ev.target[0].value;
   const userAge=ev.target[1].value;
-  const bkcColor=ev.target[2].value;
-  const txtColor=ev.target[3].value;
-  const userBirthDate=ev.target[4].valueAsNumber;
-  const userBirthTime=ev.target[5].valueAsNumber;
+  const bkcColor=ev.target[3].value;
+  const txtColor=ev.target[4].value;
+  const userBirthDate=ev.target[5].valueAsNumber;
+  const userBirthTime=ev.target[6].valueAsNumber;
   
   setUserSettings(usrEmail,userAge,bkcColor,txtColor,userBirthDate,userBirthTime);
 
@@ -44,4 +44,10 @@ function changeBgc(color) {
 function changeTxtColor(color) {
   const elBody = document.querySelector(`body`);
   elBody.style.color = color;
+}
+
+function showAge(elAge){
+  elAge.title=elAge.value;
+  const elAgeLabel=document.querySelector('[for="user-age"]');
+  elAgeLabel.innerText=`${elAge.value}`
 }
